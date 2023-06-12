@@ -37,7 +37,7 @@ clearnot(){
   this.notification=0
 }
 userNameUpdate(){
-  this.socket=io.io(`http://localhost:3000`)
+  this.socket=io.io(`https://getway.onrender.com/`)
   console.log(name);
   
 
