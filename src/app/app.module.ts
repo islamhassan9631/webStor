@@ -23,6 +23,9 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ProductBoxComponent } from './components/product-box/product-box.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatComponent } from './pages/chat/chat.component';
+import { UserComponent } from './components/user/user.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,12 +36,15 @@ import { HttpClientModule } from '@angular/common/http';
     ProductHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent
+    CartComponent,
+    ChatComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatSidenavModule,
     MatGridListModule,
     MatMenuModule,

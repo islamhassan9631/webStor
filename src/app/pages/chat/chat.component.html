@@ -1,0 +1,38 @@
+
+<div class="body">
+    <div class="container">
+   <input type="text" [(ngModel)]="my">
+    <h1>ODC- chat app</h1>
+    <div class="chatbox">
+        <div class="userlist">
+            <h2>User list</h2>
+            <div class="pernt" *ngFor="let user of userlist ">
+                <span class="chatbox-user-active"></span>
+                <p class="user">{{user}}</p>
+                
+            </div>
+        </div>
+        <div class="messages-list" >
+            <div class="chatbox-message" *ngFor="let msg of messagelist " [ngClass]="{mine:msg.mine}">
+                <div class="user-message">
+                    <div class="message-box">
+                        <p class="name">{{msg.userName }} :</p>
+                     
+                        <p class="message">{{msg.message}}</p>
+                        <span class="time">{{msg.time }}:{{msg.m}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="send-message">
+        <!-- <input type="file" name="avatar" ngModel (change)="handelUpload($event)"> -->
+        
+        <input type="text" [(ngModel)]="message" (keyupdown)="sendmessage()">
+        
+    <button (click)="sendmessage()" (keyup.enter)="sendmessage()">send</button>
+    </div>
+</div>
+
+</div>
+
