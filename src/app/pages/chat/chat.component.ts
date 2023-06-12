@@ -21,7 +21,7 @@ export class ChatComponent implements OnInit{
   time2 :any=new Date().getMinutes()
   
   userNameUpdate(){
-    this.socket=io.io(`http://localhost:3000`)
+    this.socket=io.io(`https://getway.onrender.com/`)
 
 
   
